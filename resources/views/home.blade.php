@@ -26,12 +26,10 @@
     </div>
     <div class="bg-primary d-flex py-4">
         <div class="container d-flex justify-content-between align-items-center p-3">
-            <div>
-                @foreach ($content as $el)
-                <img src="{{$el['img']}}" alt="">
-                <span class="p-2 text-uppercase">{{ $el['text'] }}</span>
-                @endforeach
-            </div>
+            @foreach ($content as $el)
+            <img src="{{$el['img']}}" alt="" class="blue-bar-image">
+            <span class="p-2 text-uppercase">{{ $el['text'] }}</span>
+            @endforeach
         </div>
     </div>
 </main>
