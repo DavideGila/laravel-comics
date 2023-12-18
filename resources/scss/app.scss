@@ -39,3 +39,18 @@ a {
 .blue-bar-image{
     width: 40px;
 }
+
+.bg-main {
+    background-image: url('images/footer-bg.jpg');
+    background-size: cover;
+}
+
+.bg-main-logo {
+    background-image: url('/images/dc-logo-bg.png');
+    background-position: right;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+.bg-grey {
+    background-color: rgb(53, 53, 53)
+}
