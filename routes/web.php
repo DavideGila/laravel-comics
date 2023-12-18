@@ -17,4 +17,10 @@ Route::get('/', function () {
     $product = config('comics.comic');
     $content = config('bluebar.content');
     return view('home', compact('product', 'content'));
-});
+})->name('home');
+
+Route::get('/movie', function () {
+    $product = config('comics.comic');
+    $content = config('bluebar.content');
+    return view('pages.movie', compact('product', 'content'));
+})->name('movie');
