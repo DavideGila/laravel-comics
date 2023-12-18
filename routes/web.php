@@ -14,5 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    $product = config('comics.comic');
+    $content = config('bluebar.content');
+    return view('home', compact('product'), compact('content'));
 });
