@@ -29,3 +29,14 @@ Route::get('/comics', function () {
     $content = config('bluebar.content');
     return view('comics.index', compact('product', 'content'));
 })->name('comics.index');
+
+Route::get('/comics/{id}', function ($id) {
+    $product = config('comics.comic');
+    $content = config('bluebar.content');
+    if ($id >= 0 && $id < count($product)) {
+        $product = $product[$id];
+        return view('comics.show', compact('product', 'content'));
+    } else {
+        abort(404);
+    }
+})->name('comics.show');
