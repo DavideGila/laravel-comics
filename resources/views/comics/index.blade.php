@@ -8,13 +8,14 @@
         <div class="container">
             <span class="text-light bg-primary p-3 fs-3 text-uppercase">Current Series</span>
             <div class="row">
-                @foreach ($product as $el)
+                @foreach ($product as $key => $el)
                     <div class="col-2 py-5">
                         <div>
                             <img src="{{ $el['thumb'] }}" alt="" class="object-fit-cover series-img">
                             <div>
                                 <h6 class="title text-light text-uppercase">{{ $el['title'] }}</h6>
                             </div>
+                            <div><a href="{{route('comics.show', $key)}}" class="btn btn-primary">Read More</a></div>
                         </div>
                     </div>
                 @endforeach
